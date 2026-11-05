@@ -20,6 +20,8 @@
 
 ```
 index.html                 主程序（单文件，内联 JS）
+aquarium-standalone.html   单文件版：素材全部内联为 base64，可直接双击打开
+build_standalone.js        生成单文件版的脚本
 sprites/                   w0..w8.png 鱼素材 + bg_forest.jpg 背景
 WallLib.cs                 壁纸嵌入工具源码（SetParent 到 WorkerW + 启动 Chrome）
 matte*.cs                  素材处理工具（抠图羽化、去杂点、PCA 主轴对齐）
@@ -30,6 +32,10 @@ cap8.ps1                   PrintWindow 截屏脚本（调试用）
 ## 使用
 
 **直接打开**：双击 `index.html`（互动模式，可点击、可逗鱼）。
+
+**单文件版**：`aquarium-standalone.html` 把背景和 9 种鱼全部内联成 base64（约 5.7 MB），
+单个文件即可双击打开，**不依赖 `sprites/` 目录**，可以随便拷贝或上传到任意静态托管。
+改动素材后重新生成：`node build_standalone.js`。
 
 **设为桌面壁纸**：运行 `AquariumWallpaper.exe`（或 `桌面壁纸.vbs`）。
 它用 Chrome 以 app 模式打开 `index.html?wallpaper`，再把窗口挂到桌面的 `WorkerW` 上。

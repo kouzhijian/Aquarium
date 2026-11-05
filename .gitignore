@@ -1,0 +1,16 @@
+profile/
+inbox/
+webp2png/
+pool/
+pool2/
+*.exe
+*.log
+_chk.js
+patch*.js
+ref.png
+reef_src.png
+*_src.jpg
+*_src.png
+*.psd
+Thumbs.db
+.DS_Store
